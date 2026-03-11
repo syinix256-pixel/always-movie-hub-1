@@ -29,7 +29,7 @@ const USER_CREDENTIALS = {
   password: "Gilbertadmin",
 };
 
-// Sample copyright-free movies (placeholder data)
+// Sample movies (placeholder data)
 export interface Movie {
   id: string;
   title: string;
