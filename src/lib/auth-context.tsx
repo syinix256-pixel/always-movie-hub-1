@@ -40,7 +40,6 @@ export interface Movie {
   genre: string;
   year: number;
   rating: number;
-  isFree: boolean;
   price: number; // Pay per view price in UGX
 }
 
@@ -55,7 +54,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Documentary",
     year: 2024,
     rating: 4.5,
-    isFree: true,
     price: 500,
   },
   {
@@ -68,7 +66,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Adventure",
     year: 2024,
     rating: 4.8,
-    isFree: false,
     price: 500,
   },
   {
@@ -81,7 +78,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Drama",
     year: 2023,
     rating: 4.2,
-    isFree: true,
     price: 500,
   },
   {
@@ -94,7 +90,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Documentary",
     year: 2024,
     rating: 4.6,
-    isFree: false,
     price: 500,
   },
   {
@@ -107,7 +102,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Action",
     year: 2023,
     rating: 4.3,
-    isFree: true,
     price: 500,
   },
   {
@@ -120,7 +114,6 @@ const SAMPLE_MOVIES: Movie[] = [
     genre: "Documentary",
     year: 2024,
     rating: 4.9,
-    isFree: false,
     price: 500,
   },
 ];

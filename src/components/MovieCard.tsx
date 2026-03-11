@@ -15,7 +15,7 @@ export default function MovieCard({ movie }: MovieCardProps) {
   const purchased = hasPurchased(movie.id);
   const isSubscribed = user?.subscription?.active;
 
-  const canWatch = movie.isFree || purchased || isSubscribed;
+  const canWatch = purchased || isSubscribed;
 
   const handleWatchlistToggle = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -43,11 +43,9 @@ export default function MovieCard({ movie }: MovieCardProps) {
               <span className="text-xs bg-black/60 px-2 py-1 rounded text-white">
                 {movie.duration}
               </span>
-              {!movie.isFree && (
-                <span className="text-xs bg-[var(--warning)] px-2 py-1 rounded text-black font-semibold">
+              <span className="text-xs bg-[var(--warning)] px-2 py-1 rounded text-black font-semibold">
                   {purchased || isSubscribed ? "UNLOCKED" : `UGX ${movie.price}`}
                 </span>
-              )}
             </div>
           </div>
           

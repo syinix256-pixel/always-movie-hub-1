@@ -20,7 +20,6 @@ export default function AdminPage() {
   const [genre, setGenre] = useState("");
   const [year, setYear] = useState(new Date().getFullYear());
   const [rating, setRating] = useState(4.0);
-  const [isFree, setIsFree] = useState(true);
   const [price, setPrice] = useState(500);
 
   // Redirect if not authenticated or not admin
@@ -41,7 +40,6 @@ export default function AdminPage() {
     setGenre("");
     setYear(new Date().getFullYear());
     setRating(4.0);
-    setIsFree(true);
     setPrice(500);
     setEditingMovie(null);
   };
@@ -58,7 +56,6 @@ export default function AdminPage() {
       genre,
       year,
       rating,
-      isFree,
       price,
     };
 
@@ -83,7 +80,6 @@ export default function AdminPage() {
     setGenre(movie.genre);
     setYear(movie.year);
     setRating(movie.rating);
-    setIsFree(movie.isFree);
     setPrice(movie.price);
     setEditingMovie(movie);
     setShowAddMovie(true);
@@ -136,12 +132,8 @@ export default function AdminPage() {
             <p className="text-2xl font-bold text-[var(--foreground)]">{movies.length}</p>
           </div>
           <div className="bg-[var(--card-bg)] rounded-lg p-4 border border-[var(--border)]">
-            <p className="text-sm text-[var(--text-muted)]">Free Movies</p>
-            <p className="text-2xl font-bold text-[var(--success)]">{movies.filter(m => m.isFree).length}</p>
-          </div>
-          <div className="bg-[var(--card-bg)] rounded-lg p-4 border border-[var(--border)]">
             <p className="text-sm text-[var(--text-muted)]">Premium Movies</p>
-            <p className="text-2xl font-bold text-[var(--warning)]">{movies.filter(m => !m.isFree).length}</p>
+            <p className="text-2xl font-bold text-[var(--warning)]">{movies.length}</p>
           </div>
           <div className="bg-[var(--card-bg)] rounded-lg p-4 border border-[var(--border)]">
             <p className="text-sm text-[var(--text-muted)]">Genres</p>
@@ -182,15 +174,9 @@ export default function AdminPage() {
 
                   {/* Status */}
                   <div className="hidden md:block">
-                    {movie.isFree ? (
-                      <span className="text-xs bg-[var(--success)]/20 text-[var(--success)] px-2 py-1 rounded">
-                        Free
-                      </span>
-                    ) : (
-                      <span className="text-xs bg-[var(--warning)]/20 text-[var(--warning)] px-2 py-1 rounded">
-                        UGX {movie.price}
-                      </span>
-                    )}
+                    <span className="text-xs bg-[var(--warning)]/20 text-[var(--warning)] px-2 py-1 rounded">
+                      UGX {movie.price}
+                    </span>
                   </div>
 
                   {/* Actions */}
@@ -383,15 +369,8 @@ export default function AdminPage() {
                 </div>
 
                 <div className="flex items-center gap-3 pt-6">
-                  <input
-                    type="checkbox"
-                    id="isFree"
-                    checked={isFree}
-                    onChange={(e) => setIsFree(e.target.checked)}
-                    className="w-5 h-5 accent-[var(--primary)]"
-                  />
-                  <label htmlFor="isFree" className="text-[var(--foreground)]">
-                    Free Movie
+                  <label htmlFor="price" className="text-[var(--foreground)]">
+                    Price (UGX)
                   </label>
                 </div>
               </div>

@@ -32,7 +32,7 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
   const isSubscribed = user?.subscription?.active;
   const purchased = hasPurchased(movie.id);
   const inWatchlist = isInWatchlist(movie.id);
-  const canWatch = movie.isFree || purchased || isSubscribed;
+  const canWatch = purchased || isSubscribed;
 
   const handlePlay = () => {
     if (!isAuthenticated) {
@@ -40,7 +40,7 @@ export default function MovieDetailPage({ params }: { params: Promise<{ id: stri
       return;
     }
 
-    if (!canWatch && !movie.isFree) {
+    if (!canWatch) {
       setShowPaymentModal(true);
       return;
     }

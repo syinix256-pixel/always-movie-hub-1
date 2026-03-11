@@ -25,8 +25,6 @@ export default function BrowsePage() {
 
   const filterOptions = [
     { value: "all", label: "All Movies" },
-    { value: "free", label: "Free Movies" },
-    { value: "premium", label: "Premium (UGX 500)" },
   ];
 
   const sortOptions = [
@@ -38,13 +36,6 @@ export default function BrowsePage() {
 
   const filteredMovies = useMemo(() => {
     let result = [...movies];
-
-    // Apply filter
-    if (filter === "free") {
-      result = result.filter((m) => m.isFree);
-    } else if (filter === "premium") {
-      result = result.filter((m) => !m.isFree);
-    }
 
     // Apply genre filter
     if (genre !== "all") {
