@@ -4,8 +4,8 @@ import { AuthProvider } from "@/lib/auth-context";
 import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
-  title: "Always Movie Hub - Stream Free Movies",
-  description: "Your destination for streaming copyright-free movies. Subscribe or pay per view.",
+  title: "Movie Bus - Stream Premium Movies",
+  description: "Your destination for streaming premium movies. Subscribe or pay per view.",
   keywords: ["movies", "streaming", "free movies", "download", "entertainment"],
 };
 

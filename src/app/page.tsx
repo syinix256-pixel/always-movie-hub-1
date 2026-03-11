@@ -321,7 +321,7 @@ export default function HomePage() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-[var(--foreground)] mb-6">
-              Why Choose Always Movie Hub?
+              Why Choose Movie Bus?
             </h2>
             <p className="text-[var(--text-muted)] text-xl max-w-2xl mx-auto">
               Experience the best in streaming entertainment with features designed for movie lovers.
@@ -375,7 +375,7 @@ export default function HomePage() {
                   <polygon points="5 3 19 12 5 21 5 3" />
                 </svg>
               </div>
-              <span className="font-bold text-2xl text-[var(--foreground)]">Always Movie Hub</span>
+              <span className="font-bold text-2xl text-[var(--foreground)]">Movie Bus</span>
             </div>
             <div className="flex items-center gap-8 text-[var(--text-muted)]">
               <Link href="/browse" className="hover:text-[var(--primary)] transition-colors text-lg">Browse</Link>
@@ -385,7 +385,7 @@ export default function HomePage() {
           </div>
           <div className="mt-8 pt-8 border-t border-[var(--border)] text-center">
             <p className="text-sm text-[var(--text-muted)]">
-              © 2024 Always Movie Hub. All rights reserved.
+              © 2024 Movie Bus. All rights reserved.
             </p>
           </div>
         </div>

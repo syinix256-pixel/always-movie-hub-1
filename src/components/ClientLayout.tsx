@@ -66,7 +66,7 @@ export default function ClientLayout({ children }: ClientLayoutProps) {
                   </svg>
                 </div>
                 <span className="text-xl font-bold text-[var(--foreground)]">
-                  Always Movie Hub
+                  Movie Bus
                 </span>
               </Link>
 

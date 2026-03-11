@@ -51,7 +51,7 @@ export default function LoginPage() {
               </svg>
             </div>
             <span className="text-2xl font-bold text-[var(--foreground)]">
-              Always Movie Hub
+              Movie Bus
             </span>
           </div>
         </div>
